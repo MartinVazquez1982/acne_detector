@@ -9,7 +9,6 @@ Este proyecto tiene como objetivo desarrollar un sistema automatizado para la de
 
 - **Código fuente**: Contiene los scripts en Python para cada etapa del procesamiento de imágenes.
 - **Dataset**: Se utilizaron datasets preexistentes de imágenes faciales con anotaciones de acné para entrenar y evaluar el modelo.
-- **Informes y Documentación**: Incluye el informe completo del proyecto, describiendo los métodos y resultados obtenidos.
 
 ## Requisitos
 
