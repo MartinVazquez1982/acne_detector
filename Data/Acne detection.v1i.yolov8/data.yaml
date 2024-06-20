@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Acne']
+
+roboflow:
+  workspace: khang-nghia
+  project: acne-detection-zbzcs
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/khang-nghia/acne-detection-zbzcs/dataset/1
