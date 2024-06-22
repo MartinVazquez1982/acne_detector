@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import os
+import sys
 
 src = None
 mousedown = False
@@ -27,7 +27,7 @@ def find_acne(img):
         Returns:
             boolean: Resultado de la corroboración del color
         '''
-        return 0 <= color[0] <= 15 and 50 < color[1] < 255
+        return (0 <= color[0] <= 20) and (50 <= color[1] <= 255) and (50 <= color[2] <= 220)
     
     
     # PREPROCESAMIENTO
@@ -133,11 +133,8 @@ def acne_detection(path):
     return 0
 
 if __name__ == "__main__":
-    acne_detection(r"..\\Data\\acne.png")
-    #acne_detection(r"..\\Data\\levle1_139.jpg")
-    #acne_detection(r"..\\Data\\levle1_141.jpg")
-    #acne_detection(r"..\\Data\\levle2_126.png")
-    #acne_detection(r'C:\\Users\\s7tan\\OneDrive\\Desktop\\Universidad\\Procesamiento de Imagenes\\Project\\Data\\Acne detection.v1i.yolov8\\test\\images\\pic_009_jpeg.rf.17fecc6d185807442a8eb91506339736.jpg')
-    #for file_name in os.listdir(r'C:\\Users\\s7tan\\OneDrive\\Desktop\\Universidad\\Procesamiento de Imagenes\\Project\\Data\\Acne detection.v1i.yolov8\\valid\\images'):
-    #    file_name = os.path.join(r'C:\\Users\\s7tan\\OneDrive\\Desktop\\Universidad\\Procesamiento de Imagenes\\Project\\Data\\Acne detection.v1i.yolov8\\valid\\images', file_name)
-    #    acne_detection(file_name)
+    if len(sys.argv) < 2:
+        print("Uso: python acne_detection.py <path_imagen>")
+    else:
+        path = sys.argv[1]
+        acne_detection(path)
