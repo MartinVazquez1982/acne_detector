@@ -29,7 +29,7 @@ Este proyecto tiene como objetivo desarrollar un sistema automatizado para la de
 
 Para ejecutar el sistema de detección de acné, utiliza el siguiente comando:
 ```bash
-python acne_detector.py --input <ruta_a_la_imagen>
+python acne_detector.py <ruta_a_la_imagen>
 ```
 
 ## Flujo de Trabajo
